@@ -19,7 +19,7 @@
 
 body {
   background-color: white;
-  max-width: 2000px; 
+  max-width: 2000px;
   margin: auto;
 }
 
@@ -41,4 +41,52 @@ body {
   background-image: url(../img/Slide\ 3\ bg.png);
   background-repeat: no-repeat;
   background-size: 100% 100%;
+}
+
+.social-btn {
+  --c: rgb(0, 0, 0);
+  color: var(--c);
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+  transition: 0.5s;
+  letter-spacing: 0.07rem;
+  display: block;
+}
+
+.social-btn span {
+  position: absolute;
+  width: 25%;
+  height: 100%;
+  background-color: var(--c);
+  transform: translateY(150%);
+  border-radius: 50%;
+  left: calc((var(--n) - 1) * 25%);
+  transition: 0.5s;
+  transition-delay: calc((var(--n) - 1) * 0.1s);
+  z-index: -1;
+}
+
+.social-btn:hover {
+  color: white;
+}
+
+.social-btn:hover span {
+  transform: translateY(0) scale(2);
+}
+
+.social-btn span:nth-child(1) {
+  --n: 1;
+}
+
+.social-btn span:nth-child(2) {
+  --n: 2;
+}
+
+.social-btn span:nth-child(3) {
+  --n: 3;
+}
+
+.social-btn span:nth-child(4) {
+  --n: 4;
 }
